@@ -71,12 +71,12 @@ jobs:
     steps:
       - name: AWS SSM Send-Command
         uses: peterkimzz/aws-ssm-send-command@master
-        id: i-0c702072a9458dcc8
+        id: ssm
         with:
           aws-region: ${{ secrets.AWS_REGION }}
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          instance-ids: "i-015d44766db7d2a9f"
+          instance-ids: "i-0c702072a9458dcc8"
           working-directory: /
           comment: Deploy
           command: |
